@@ -3,7 +3,7 @@
 
 	<head>
 		
-<title>Hello World-我的博客</title>
+<title>github+hexo搭建个人博客-我的博客</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -210,7 +210,7 @@
         <ul class="tag">
             
         </ul>
-        <h1>Hello World</h1>
+        <h1>github+hexo搭建个人博客</h1>
         <div class="article-info">
             <div class="article-author">
                 
@@ -230,19 +230,29 @@
 </div>
 <div class="article-content">
     <div id="article" class="content">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+        <h3 id="一-github-创建新仓库"><a href="#一-github-创建新仓库" class="headerlink" title="一. github 创建新仓库"></a>一. github 创建新仓库</h3><h4 id="1-创建新仓库"><a href="#1-创建新仓库" class="headerlink" title="1. 创建新仓库"></a>1. 创建新仓库</h4><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkvr7fvfzqj309o06gt8t.jpg" alt="a"></p>
+<p>新仓库名必须为 <code>你的用户名.github.io</code>，勾选创建 README 文件，之后个人博客网址为<code>https://你的用户名.github.io/</code>。</p>
+<h4 id="2-进入仓库的-Setting-设置"><a href="#2-进入仓库的-Setting-设置" class="headerlink" title="2. 进入仓库的 Setting 设置"></a>2. 进入仓库的 Setting 设置</h4><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkvrwbmzbij30rn05hwex.jpg"><br><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkvrwnf5lnj30lu05e74n.jpg"></p>
+<p>可看到自己的博客网址。</p>
+<h3 id="二-安装-HEXO"><a href="#二-安装-HEXO" class="headerlink" title="二. 安装 HEXO"></a>二. 安装 HEXO</h3><p>Hexo 支持 GitHub Flavored Markdown 的所有功能，快速、简洁且高效的博客框架。<br><a target="_blank" rel="noopener" href="http://hexo.io/">HEXO 官网</a></p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">//</span> 全局安装<br>npm install -g hexo<br><br><span class="hljs-regexp">//</span> 本地创建文件夹hexo-blo（名字自定义），并进行初始化<br>mikdir hexo-blo<br>cd hexo-blo<br><span class="hljs-regexp">//</span> 初始化之后会生成博客一些基本文件<br>hexo init<br><br><span class="hljs-regexp">//</span> 编译项目<br>hexo g<br><span class="hljs-regexp">//</span> 本地运行查看<br>hexo s<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<h3 id="三-修改-hexo-博客主题"><a href="#三-修改-hexo-博客主题" class="headerlink" title="三. 修改 hexo 博客主题"></a>三. 修改 hexo 博客主题</h3><p><a target="_blank" rel="noopener" href="https://hexo.io/themes/">HEXO 官网主题</a></p>
+<p>预览主题时可点击主题的 github 链接进入查看安装配置步骤。</p>
+<p><strong>以下示例 Quiet 主题的安装配置，参考一下链接有详细的配置步骤：</strong><br><a target="_blank" rel="noopener" href="https://github.com/QiaoBug/hexo-theme-quiet">Quiet 的 github 地址</a></p>
+<h3 id="四-上传代码到-github-前需要配置-ssh"><a href="#四-上传代码到-github-前需要配置-ssh" class="headerlink" title="四. 上传代码到 github 前需要配置 ssh"></a>四. 上传代码到 github 前需要配置 ssh</h3><figure class="highlight jboss-cli"><table><tr><td class="code"><pre><code class="hljs jboss-cli">ssh-keygen -trsa -C<span class="hljs-string">&quot;github绑定的邮箱&quot;</span><br><span class="hljs-string">//</span> 回车3次<br><span class="hljs-keyword">cd</span> ~<span class="hljs-string">/.ssh</span> <span class="hljs-string">//</span> <span class="hljs-keyword">ls</span>可查看<br><span class="hljs-string">//</span> 复制密钥<br>cat id_rsa.pub<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+<p>打开 github 的<code>Settings --&gt; SSH keys --&gt; New SSH key</code>，并把复制的密钥粘贴上去，创建新的 ssh。</p>
+<h3 id="五-将代码上传到-github-新建的博客仓库"><a href="#五-将代码上传到-github-新建的博客仓库" class="headerlink" title="五. 将代码上传到 github 新建的博客仓库"></a>五. 将代码上传到 github 新建的博客仓库</h3><p>先安装 hexo-deployer-git 插件，不然上传代码报错。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><code class="hljs sql">npm <span class="hljs-keyword">install</span> hexo-deployer-git <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+<p>配置<code>_config.yml</code>中的 deploy ：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><code class="hljs less"><span class="hljs-attribute">deploy</span>:<br>  <span class="hljs-attribute">type</span>: git<br>  <span class="hljs-attribute">repository</span>: git<span class="hljs-variable">@github</span>.<span class="hljs-attribute">com</span>:xxx.github.io.git<br>  <span class="hljs-attribute">branch</span>: mian<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>最后执行以下命令上传至 github：</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo d</span><br></code></pre></td></tr></table></figure>
+
+<p>再去查看你的博客网站是否有改变，如果没有改变，需要重新编译项目<code>hexo g</code>，再重新上传。<br>以上就是搭建步骤。</p>
 
     </div>
 </div>
